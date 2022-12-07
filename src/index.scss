@@ -47,23 +47,22 @@ body {
     family: 'Regular';
   }
   color: $black;
-  height: 100vh;
+  
 }
 #root {
   border: 2px solid $foreground;
   background-color: $foreground;
   border-radius: 1rem;
-  width: 1500px;
-  aspect-ratio: 16/9;
+  width: 1100px;
   box-shadow: -1rem 3rem 2rem 0rem rgba($black, 0.5);
+  min-height: 1500px;
 }
 
 .App {
   position: relative;
-  display: flex;
-  height: 100%;
-  flex-flow: column wrap;
-  justify-content: space-between;
+  display: flex;  
+  flex-flow: column nowrap;
+  min-height:1500px;  
 }
 header {
   display: flex;
@@ -76,8 +75,8 @@ header {
   }
   @keyframes borderAnimation {
     0% {
-      border-bottom: none;
-      width: 0;
+      border-bottom: 0.3rem solid transparent;
+      width: 0rem;
     }
     100% {
       border-bottom: 0.3rem solid $purple;
@@ -110,15 +109,15 @@ header {
     }
     span {
       cursor: pointer;
-      color: rgba($black,0.3);
-      background-color: rgba(pink,0.3);
-      padding:1rem;
+      color: rgba($black, 0.3);
+      background-color: rgba(pink, 0.3);
+      padding: 1rem;
       border-radius: 50%;
       transition: all 0.3s;
       border: 2px solid transparent;
 
       &:hover {
-        color:  rgba($pink,0.7);
+        color: rgba($pink, 0.7);
         border: 2px solid $pink;
       }
     }
@@ -126,12 +125,10 @@ header {
   .nav {
     ul {
       display: flex;
-      justify-content: space-evenly;
-      width: 40vw;
+      gap: 8rem;
       list-style-type: none;
       li {
         width: 0rem;
-
         a {
           display: inline-block;
           overflow: visible;
@@ -223,7 +220,10 @@ aside {
   width: 100%;
   grid-template: {
     rows: auto;
-    columns: 1fr 1fr;
+    columns: 55% 45%;
+  }
+  margin: {
+    top: 5rem;
   }
   padding: {
     left: 5rem;
@@ -236,9 +236,7 @@ aside {
         row: 1/2;
         column: 1/2;
       }
-      padding: {
-        right: 7rem;
-      }
+
       h2 {
         font: {
           family: 'Black';
@@ -257,6 +255,7 @@ aside {
         }
         padding: {
           bottom: 1rem;
+          right: 7rem;
         }
         span {
           font: {
@@ -299,7 +298,6 @@ aside {
     }
     &:nth-of-type(2) {
       place-self: end;
-      max-width: 30vw;
       grid: {
         row: 1/2;
         column: 2/3;
@@ -309,9 +307,12 @@ aside {
 }
 
 .donations {
+  animation: dissolveInLeft 3s;
   display: flex;
   flex-flow: column nowrap;
-
+  margin:{
+    top: 5rem;
+  }
   article {
     width: 100%;
     display: flex;
@@ -330,12 +331,12 @@ aside {
         }
       }
       p {
-        padding:{
-          top:1rem;
+        padding: {
+          top: 1rem;
         }
         font: {
           family: 'Semi';
-          size:1.3rem;
+          size: 1.3rem;
         }
       }
     }
@@ -349,6 +350,7 @@ footer {
   background-color: $contrast;
   min-height: 5rem;
   border-radius: 0 0 1rem 1rem;
+  margin-top: auto;
   padding: {
     top: 1rem;
     left: 5rem;
