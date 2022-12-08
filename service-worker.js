@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/crlarrea/angus_project/precache-manifest.ebaf7c8574f6902ee140057dbf40cc8c.js"
+  "/angus_project/precache-manifest.1aa201674e2bfe29209daf02432bd3bb.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/crlarrea/angus_project/index.html", {
+workbox.routing.registerNavigationRoute("/angus_project/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
