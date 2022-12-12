@@ -1,7 +1,7 @@
 {
   "name": "angus",
   "version": "0.1.0",
-  "homepage": "https://github.com/crlarrea/angus_project",
+  "homepage": "https://crlarrea.github.io/angus_project",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -44,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
