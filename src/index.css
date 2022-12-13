@@ -239,6 +239,8 @@ aside {
     .donations article:first-of-type {
       display: flex;
       flex-flow: column nowrap; }
+      .donations article:first-of-type:first-child div {
+        width: 10rem; }
       .donations article:first-of-type h3 {
         text-transform: capitalize;
         font-size: 2rem;
@@ -270,9 +272,14 @@ aside {
             opacity: 0.7; }
           .donations article:nth-of-type(2) div:hover span {
             color: #6e55b6ff; }
+            .donations article:nth-of-type(2) div:hover span:nth-of-type(2) {
+              color: #fcbf49; }
+          .donations article:nth-of-type(2) div:hover div {
+            transform: none;
+            background-color: rgba(110, 85, 182, 0.3); }
         .donations article:nth-of-type(2) div div {
           border-radius: 50%;
-          border: 2px solid #6e55b6ff;
+          border: 2px solid rgba(110, 85, 182, 0.3);
           background-color: rgba(234, 162, 183, 0.3);
           aspect-ratio: 1/1;
           min-height: 0;
@@ -298,6 +305,94 @@ aside {
           color: rgba(41, 50, 65, 0.7);
           font-family: 'Semi';
           font-size: 3rem; }
+          .donations article:nth-of-type(2) div span:nth-of-type(2) {
+            font-size: 2.5rem;
+            color: #e4e4e4ff; }
+    .donations article:nth-of-type(3) {
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+      padding-left: 5rem;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      gap: 1rem; }
+      .donations article:nth-of-type(3) div {
+        width: 10rem; }
+      .donations article:nth-of-type(3) h4 {
+        font-size: 2rem;
+        font-family: 'Black'; }
+      .donations article:nth-of-type(3) form {
+        text-align: center; }
+        .donations article:nth-of-type(3) form label {
+          font-family: 'Semi';
+          font-size: 2rem;
+          color: rgba(41, 50, 65, 0.7); }
+        .donations article:nth-of-type(3) form input[type='text'] {
+          transition: all 0.3s;
+          font-family: 'Black';
+          font-size: 2rem;
+          width: 3.5rem;
+          color: #293241;
+          border: none;
+          border-bottom: 2px solid rgba(41, 50, 65, 0.5);
+          background-color: transparent; }
+          .donations article:nth-of-type(3) form input[type='text']::placeholder {
+            color: rgba(41, 50, 65, 0.3); }
+          .donations article:nth-of-type(3) form input[type='text']:focus {
+            outline: none;
+            border-bottom: 2px solid #6e55b6ff; }
+        .donations article:nth-of-type(3) form input[type='submit'] {
+          cursor: pointer;
+          transition: all 0.3s;
+          margin-top: 2rem;
+          background-color: #fcbf49;
+          border: none;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          border-radius: 0.5rem;
+          color: #293241;
+          text-transform: uppercase;
+          font-family: 'Semi';
+          font-size: 1.5rem; }
+          .donations article:nth-of-type(3) form input[type='submit']:hover {
+            transform: scale(1.1); }
+
+.adoptions {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem; }
+  .adoptions article:first-of-type {
+    margin-top: 10rem; }
+    .adoptions article:first-of-type div {
+      width: 25rem; }
+  .adoptions article:nth-of-type(2) {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 2rem; }
+    .adoptions article:nth-of-type(2) h3 {
+      font-family: 'Black';
+      font-size: 2rem;
+      text-transform: capitalize; }
+    .adoptions article:nth-of-type(2) p {
+      max-width: 25rem; }
+    .adoptions article:nth-of-type(2) form {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem; }
+      .adoptions article:nth-of-type(2) form input[type='text'], .adoptions article:nth-of-type(2) form input[type='email'] {
+        width: 25rem;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid rgba(41, 50, 65, 0.3); }
+        .adoptions article:nth-of-type(2) form input[type='text']:focus, .adoptions article:nth-of-type(2) form input[type='email']:focus {
+          border-bottom: 2px solid rgba(110, 85, 182, 0.7);
+          outline: none; }
 
 footer {
   display: flex;

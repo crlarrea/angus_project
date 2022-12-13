@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import paw from '../assets/img/paw.svg';
@@ -20,6 +21,13 @@ export const Donations = () => {
   return (
     <section className='donations'>
       <article>
+      <Player autoplay loop speed="0.2" src={require('../assets/img/money_jar.json')}>
+          <Controls
+            visible={false}
+            buttons={['play', 'repeat', 'frame', 'debug']}
+          />
+        </Player>
+
         <h3>choose your monthly donation</h3>
         <p>
           Can't adopt? Donating a small amount or sponsoring a cat can help us.
@@ -48,11 +56,19 @@ export const Donations = () => {
         })}
       </article>
       <article>
+      <Player autoplay loop speed="1" src={require('../assets/img/one_off_donation.json')}>
+          <Controls
+            visible={false}
+            buttons={['play', 'repeat', 'frame', 'debug']}
+          />
+        </Player>
+
         <h4>One-off donation</h4>
         <div>
-          <form onClick={addToBasket}>
-            <input type='text' />
-            <button>add</button>
+          <form >
+            <label htmlFor='oneOffDonation'>£</label>
+            <input  id='oneOffDonation' name='oneOffDonation' type='text' placeholder='10' min='0.1'/>
+            <input type='submit' onClick={addToBasket} value='donate'/>
           </form>
         </div>
       </article>

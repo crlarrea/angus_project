@@ -8,6 +8,7 @@ $pink: #eaa2b7ff;
 $purple: #6e55b6ff;
 $blue: #0e97d3ff;
 $black: #293241;
+$yellow: #fcbf49;
 $foreground: #f5f5f5ff;
 $contrast: #e4e4e4ff;
 @font-face {
@@ -388,6 +389,11 @@ aside {
     &:first-of-type {
       display: flex;
       flex-flow: column nowrap;
+      &:first-child {
+        div {
+          width: 10rem;
+        }
+      }
       h3 {
         text: {
           transform: capitalize;
@@ -436,23 +442,29 @@ aside {
           }
           span {
             color: $purple;
+            &:nth-of-type(2) {
+              color: $yellow;
+            }
+          }
+          div {
+            transform: none;
+            background-color: rgba($purple, 0.3);
           }
         }
         div {
           border-radius: 50%;
-          border: 2px solid $purple;
-          background-color: rgba($pink,0.3);
+          border: 2px solid rgba($purple, 0.3);
+          background-color: rgba($pink, 0.3);
           aspect-ratio: 1/1;
           min-height: 0;
           min-width: 10rem;
-          margin:{
-            bottom:2rem;
+          margin: {
+            bottom: 2rem;
           }
 
           position: relative;
 
           overflow: hidden;
-
           img {
             position: absolute;
             top: 3rem;
@@ -484,11 +496,167 @@ aside {
             family: 'Semi';
             size: 3rem;
           }
+          &:nth-of-type(2) {
+            font: {
+              size: 2.5rem;
+            }
+            color: $contrast;
+          }
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      div {
+        width: 10rem;
+      }
+
+      margin: {
+        top: 10rem;
+        bottom: 10rem;
+      }
+      padding: {
+        left: 5rem;
+      }
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      gap: 1rem;
+      h4 {
+        font: {
+          size: 2rem;
+          family: 'Black';
+        }
+      }
+
+      form {
+        text-align: center;
+        label {
+          font: {
+            family: 'Semi';
+            size: 2rem;
+          }
+          color: rgba($black, 0.7);
+        }
+        input[type='text'] {
+          transition: all 0.3s;
+          font: {
+            family: 'Black';
+            size: 2rem;
+          }
+          width: 3.5rem;
+          &::placeholder {
+            color: rgba($black, 0.3);
+          }
+          color: $black;
+          border: none;
+          border: {
+            bottom: 2px solid rgba($black, 0.5);
+          }
+          &:focus {
+            outline: none;
+            border: {
+              bottom: 2px solid $purple;
+            }
+          }
+          background-color: transparent;
+        }
+        input[type='submit'] {
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            transform: scale(1.1);
+          }
+          margin: {
+            top: 2rem;
+          }
+          background: {
+            color: $yellow;
+          }
+          border: none;
+          padding: {
+            top: 0.5rem;
+            bottom: 0.5rem;
+            left: 2rem;
+            right: 2rem;
+          }
+          border-radius: 0.5rem;
+          color: $black;
+          text: {
+            transform: uppercase;
+          }
+          font: {
+            family: 'Semi';
+            size: 1.5rem;
+          }
         }
       }
     }
   }
 }
+.adoptions {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: {
+    left: 5rem;
+    right: 5rem;
+  }
+  article {
+    &:first-of-type {
+      margin: {
+        top: 10rem;
+      }
+      div {
+        width: 25rem;
+      }
+    }
+    &:nth-of-type(2) {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      gap:2rem;
+      h3 {
+        font: {
+          family: 'Black';
+          size: 2rem;
+        }
+        text: {
+          transform: capitalize;
+        }
+      }
+      p{
+        max-width:25rem;
+      }
+
+      form{
+        display: flex;
+        flex-flow: column nowrap;
+        gap:1rem;
+
+        input[type='text'], input[type='email']{
+          width:25rem;
+          background:{
+            color: transparent;
+          }
+          border:none;
+          border:{
+            bottom: 2px solid rgba($black,0.3)
+          }
+          &:focus{
+            border:{
+              bottom: 2px solid rgba($purple,0.7)
+            } 
+            outline:none;
+          }
+        }
+      }
+
+      
+    }
+  }
+}
+
 footer {
   display: flex;
   flex-flow: row wrap;
