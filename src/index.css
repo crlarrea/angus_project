@@ -256,6 +256,7 @@ aside {
         min-width: 17rem;
         border: 2px solid rgba(110, 85, 182, 0.2);
         border-radius: 1rem;
+        box-shadow: 0rem 0.5rem 1rem 0.1rem rgba(110, 85, 182, 0.2);
         cursor: pointer;
         display: flex;
         flex-flow: column nowrap;
@@ -269,6 +270,20 @@ aside {
             opacity: 0.7; }
           .donations article:nth-of-type(2) div:hover span {
             color: #6e55b6ff; }
+        .donations article:nth-of-type(2) div div {
+          border-radius: 50%;
+          border: 2px solid #6e55b6ff;
+          background-color: rgba(234, 162, 183, 0.3);
+          aspect-ratio: 1/1;
+          min-height: 0;
+          min-width: 10rem;
+          margin-bottom: 2rem;
+          position: relative;
+          overflow: hidden; }
+          .donations article:nth-of-type(2) div div img {
+            position: absolute;
+            top: 3rem;
+            width: 10rem; }
         .donations article:nth-of-type(2) div h4 {
           font-size: 2rem;
           font-family: 'Black';
